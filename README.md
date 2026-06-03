@@ -1,4 +1,3 @@
-<img width="4187" height="1764" alt="image" src="https://github.com/user-attachments/assets/0d4dae16-1774-4d1d-8093-7d38b826d95c" /># Market Regime Analysis
 
 ## Overview
 
