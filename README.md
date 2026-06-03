@@ -1,4 +1,4 @@
-# Market Regime Analysis
+<img width="4187" height="1764" alt="image" src="https://github.com/user-attachments/assets/0d4dae16-1774-4d1d-8093-7d38b826d95c" /># Market Regime Analysis
 
 ## Overview
 
@@ -66,6 +66,58 @@ Each identified regime was analyzed in terms of return behavior, volatility prof
 
 Markov chains were used to model regime transitions and evaluate how market states evolve through time.
 
+---
+## Results
+### Regime Identification: One of the central questions of this project was whether financial markets behave as completely random systems or whether recurring structures can be identified through data.
+
+The results suggest that market behavior is not entirely random. Distinct regimes emerged consistently across the analysis, exhibiting different characteristics in terms of efficiency, volatility, persistence, compression, and market activity.
+
+These findings indicate that market dynamics may be organized into observable states rather than representing a purely chaotic process.
+
+The identification of such regimes provides a structured framework for studying market behavior and evaluating how uncertainty evolves through time.
+
+ "/content/drive/MyDrive/market_regime_project/results/figures/4H_regime_profiles.png"
+### Cluster Characterization: While the clustering process successfully identified distinct market states, understanding what differentiates those states is essential for interpretation.
+
+To address this, the average feature profile of each cluster was analyzed across key variables, including efficiency, persistence, compression, volatility, market activity, and order-flow imbalance.
+
+The results suggest that each cluster exhibits a unique behavioral signature rather than representing arbitrary statistical groupings.
+
+For example:
+Cluster 2 exhibits the highest levels of efficiency and persistence, suggesting a more structured and stable market environment.
+Cluster 3 is characterized by elevated compression and volatility, indicating a potentially transitional market state where accumulated pressure may lead to significant changes in market behavior.
+
+Although these labels should be considered interpretative rather than definitive, they provide a useful framework for understanding how market conditions differ across regimes.
+
+"/content/drive/MyDrive/market_regime_project/results/figures/4H_regime_bars.png"
+
+The ability to characterize regimes based on observable market features transforms clustering from a purely mathematical exercise into a practical framework for studying market behavior. Rather than viewing the market as a homogeneous process, each regime can be analyzed as a distinct state with its own structural properties and transition dynamics.
+
+### Regimen persistence and target analysis
+
+Once distinct market regimes were identified and characterized, the next step was to evaluate whether those states were associated with meaningful target outcomes.
+
+A natural hypothesis was that certain regimes might exhibit significantly different return behavior, potentially providing a direct predictive advantage. However, the analysis revealed that return distributions remained relatively similar across regimes, suggesting that regime identification alone does not necessarily provide a strong signal for future price prediction.
+
+This finding is important because it challenges the common assumption that identifying market states automatically leads to profitable forecasting opportunities.
+
+While returns showed limited differentiation, other targets exhibited much stronger regime dependence.
+
+In particular:
+
+Regime persistence varied significantly across clusters.
+Expected duration differed between identified states.
+Some regimes demonstrated considerably greater stability than others.
+
+These results suggest that the primary value of regime identification may not lie in predicting price direction directly, but rather in understanding the structural behavior of the market.
+
+From this perspective, persistence and duration become more informative targets than returns alone, providing insight into how long a given market condition is likely to remain active.
+
+/content/drive/MyDrive/market_regime_project/results/figures/4H/cluster_target_profiles.png"
+
+This observation naturally motivates the next stage of the analysis: studying how regimes evolve through time and estimating the probability of transitions between states using Markov chain modeling.
+
+vemos markov
 ---
 ## Key Findings
 
