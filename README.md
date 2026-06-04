@@ -1,4 +1,3 @@
-<img width="2193" height="1466" alt="image" src="https://github.com/user-attachments/assets/73a906f8-a763-4819-8f73-43a2a338367b" />
 ## Overview
 
 Financial markets are among the most widely used investment environments today, attracting participants with diverse backgrounds, objectives, and analytical approaches.
