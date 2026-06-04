@@ -1,4 +1,4 @@
-
+<img width="2193" height="1466" alt="image" src="https://github.com/user-attachments/assets/73a906f8-a763-4819-8f73-43a2a338367b" />
 ## Overview
 
 Financial markets are among the most widely used investment environments today, attracting participants with diverse backgrounds, objectives, and analytical approaches.
@@ -92,31 +92,38 @@ Although these labels should be considered interpretative rather than definitive
 
 The ability to characterize regimes based on observable market features transforms clustering from a purely mathematical exercise into a practical framework for studying market behavior. Rather than viewing the market as a homogeneous process, each regime can be analyzed as a distinct state with its own structural properties and transition dynamics.
 
-### Regimen persistence and target analysis
+### Target Differentiation Across Regimes
 
-Once distinct market regimes were identified and characterized, the next step was to evaluate whether those states were associated with meaningful target outcomes.
+After identifying and characterizing the market regimes, the next objective was to evaluate whether these clusters were associated with different future outcomes. The purpose of this analysis was to determine whether regime identification could provide a measurable advantage for anticipating future market behavior.
 
-A natural hypothesis was that certain regimes might exhibit significantly different return behavior, potentially providing a direct predictive advantage. However, the analysis revealed that return distributions remained relatively similar across regimes, suggesting that regime identification alone does not necessarily provide a strong signal for future price prediction.
+Several target variables were selected for this evaluation:
 
-This finding is important because it challenges the common assumption that identifying market states automatically leads to profitable forecasting opportunities.
+* **Future Return:** to assess whether specific regimes were associated with superior future performance.
+* **Breakout Up:** to measure the probability of an upward directional expansion.
+* **Breakout Down:** to measure the probability of a downward directional expansion.
+* **Sharpe-like Ratio:** to evaluate risk-adjusted performance across regimes.
 
-While returns showed limited differentiation, other targets exhibited much stronger regime dependence.
+Future return was considered the primary target because the ultimate objective of many market participants is to identify conditions associated with superior returns. However, the results suggest that the identified clusters do not exhibit substantial differences in future returns. Although some variation exists, the separation is not sufficiently strong to conclude that regime identification alone provides a reliable predictive advantage for price forecasting.
 
-In particular:
+More noticeable differences emerge in breakout behavior. Certain clusters display a higher tendency toward upward expansions, while others exhibit a greater probability of downward breakouts. These findings suggest that the clustering process may be capturing meaningful differences in market structure and directional pressure, even if those differences are not yet reflected in future return distributions. This observation opens the possibility of further investigation using order flow and microstructural analysis to better understand the mechanisms driving these directional tendencies.
 
-Regime persistence varied significantly across clusters.
-Expected duration differed between identified states.
-Some regimes demonstrated considerably greater stability than others.
+An equally important conclusion is that the absence of strong return differentiation does not invalidate the clustering process. Instead, it suggests that the primary value of regime identification may lie elsewhere. Rather than focusing exclusively on future returns, it becomes relevant to study how regimes behave through time, how stable they are, and how likely they are to transition into different states.
 
-These results suggest that the primary value of regime identification may not lie in predicting price direction directly, but rather in understanding the structural behavior of the market.
-
-From this perspective, persistence and duration become more informative targets than returns alone, providing insight into how long a given market condition is likely to remain active.
+For this reason, the next stage of the analysis focuses on regime persistence, expected duration, and transition probabilities. By modeling the evolution of market states through Markov chains, it becomes possible to study not only the characteristics of each regime but also the dynamics governing how the market moves between them. This transition-based perspective may provide a more informative framework for anticipating future market conditions than return analysis alone.
 
 /content/drive/MyDrive/market_regime_project/results/figures/4H/cluster_target_profiles.png"
 
-This observation naturally motivates the next stage of the analysis: studying how regimes evolve through time and estimating the probability of transitions between states using Markov chain modeling.
+---
+### Regimen stability 
+After evaluating several target variables, future returns showed limited differentiation across clusters. However, significant differences emerged when analyzing regime persistence and expected duration.
 
-vemos markov
+The results indicate that market states exhibit distinct temporal behaviors. Some regimes tend to remain active for prolonged periods, while others transition more frequently.
+
+In the 4H timeframe, Cluster 3 displayed the highest persistence (85%) and the longest expected duration (6.81 periods), suggesting a particularly stable market state. Conversely, Cluster 1 exhibited the lowest stability, remaining active for shorter periods before transitioning.
+
+These findings suggest that the primary value of clustering may not lie in predicting returns directly, but rather in identifying market states with different stability characteristics. This naturally motivates the use of Markov chains to study transition probabilities and the evolution of market regimes over time
+
+"/content/drive/MyDrive/market_regime_project/results/figures/4H/regime_stability.png"
 ---
 ## Key Findings
 
