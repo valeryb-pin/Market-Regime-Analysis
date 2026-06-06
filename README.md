@@ -1,4 +1,4 @@
-## Overview
+## 1. Overview
 
 Financial markets are often described as chaotic and unpredictable systems. However, recurring market structures may emerge when behavior is analyzed through data.
 
@@ -8,7 +8,7 @@ The analysis is performed on XAUUSD (Gold Spot) data and focuses on regime persi
 
 ---
 
-## Research motivation
+## 2. Research motivation
 
 One of the central challenges in financial markets is distinguishing between randomness and structure.
 
@@ -17,7 +17,7 @@ If markets are completely random, identifying persistent patterns or recurring b
 Understanding this distinction is important because it affects how uncertainty, decision-making, and market behavior are interpreted.
 
 ---
-## Research Question
+## 3. Research Question
 
 The project seeks to answer the following questions:
 
@@ -29,14 +29,14 @@ The project seeks to answer the following questions:
 
 ---
 
-## Dataset
+## 4. Dataset
 
 The analysis is based on historical XAUUSD (Gold Spot) market data.
 The dataset includes OHLCV information and derived market features used to characterize market behavior across multiple time horizons.
 
 ---
 
-## Methodology
+## 5. Methodology
 
 Market Data
       ↓
@@ -55,7 +55,7 @@ Transition-Based Target Analysis
 Validation & Out-of-Sample Evaluation
 
 ---
-## Main Contributions
+## 6. Main Contributions
 
 This project contributes by:
 
@@ -67,7 +67,7 @@ This project contributes by:
 - Validating transition behavior across validation and out-of-sample datasets.
 
 ---
-## Results
+## 7. Results
 ### Regime Identification: 
 
 The results suggest that market behavior is not entirely random. Distinct regimes emerged consistently across the analysis, exhibiting different characteristics in terms of efficiency, volatility, persistence, compression, and market activity.
@@ -131,24 +131,7 @@ The resulting heatmap summarizes the average target behavior associated with eac
 * **Breakout Down:** probability of a downward breakout.
 /content/drive/MyDrive/market_regime_project/results/figures/4H/transition_target_heatmap.png"
 
-### Research implications
-The findings suggest that market behavior is better explained by regime evolution than by static regime identification alone.
-
-While clustering provides a useful representation of market states, the transition dynamics between those states contain additional information regarding future market behavior. Consequently, the final stage of the research focuses on combining regime transitions with order-flow and market microstructure analysis to better understand the mechanisms driving directional market movements.
-
----
-## Key findings
-
-- Market regimes can be identified consistently across multiple timeframes.
-- Regimes exhibit distinct structural characteristics.
-- Future returns show limited separation at the cluster level.
-- Regime stability differs substantially across states.
-- Markov transitions reveal dominant market pathways.
-- Transition dynamics contain more predictive information than isolated regimes.
-- Several transition patterns remain robust out-of-sample.
----
-## Validation vs Out-of-Sample Transition Analysis
-
+### Validation vs Out-of-Sample Transition Analysis
 To evaluate the robustness of the transition-based framework, the average future returns associated with the most relevant regime transitions were compared between the validation and out-of-sample datasets.
 
 The results show that several transitions maintain positive returns across both samples, suggesting that part of the information extracted from the regime transition process generalizes beyond the calibration period.
@@ -162,9 +145,32 @@ A key observation is that transitions involving Clusters **2** and **3** repeate
 Overall, the results indicate that the predictive value is not concentrated in a single cluster but rather emerges from the interaction between regimes and their transition dynamics. Consequently, the analysis supports the use of a Markov-based framework to model market evolution and motivates the next stage of the research, where transition probabilities, persistence, and order flow characteristics will be combined to better understand the mechanisms driving future market movements.
 
 /content/drive/MyDrive/market_regime_project/results/figures/4H/transition_validation_oos.png"
----
+### Research implications
+The findings suggest that market behavior is better explained by regime evolution than by static regime identification alone.
 
-## Future Work
+While clustering provides a useful representation of market states, the transition dynamics between those states contain additional information regarding future market behavior. Consequently, the final stage of the research focuses on combining regime transitions with order-flow and market microstructure analysis to better understand the mechanisms driving directional market movements.
+
+---
+## 8. Key findings
+
+- Market regimes can be identified consistently across multiple timeframes.
+- Regimes exhibit distinct structural characteristics.
+- Future returns show limited separation at the cluster level.
+- Regime stability differs substantially across states.
+- Markov transitions reveal dominant market pathways.
+- Transition dynamics contain more predictive information than isolated regimes.
+- Several transition patterns remain robust out-of-sample.
+---
+## 9.Limitations
+Several limitations should be considered:
+
+- The analysis focuses exclusively on XAUUSD.
+- Market regimes are sensitive to the selected feature set.
+- Transition dynamics may change across market environments.
+- Future returns showed limited separation at the cluster level.
+- Results should be interpreted as exploratory rather than predictive.
+---
+## 10. Future Work
 
 Future developments of the framework include:
 
@@ -174,20 +180,38 @@ Future developments of the framework include:
 - Decision tree models for regime classification
 - Probabilistic forecasting and decision support systems
 ---
-## Why This Project Matters
+## 11. Conclusion
+The study suggests that financial markets can be represented as a sequence of observable regimes rather than a purely random process.
 
-The objective of this project is not to predict prices directly.
+While cluster-level analysis showed limited predictive power in future returns, regime transitions revealed meaningful differences in directional behavior and breakout probabilities.
 
-Instead, it aims to develop a reproducible analytical framework for understanding complex dynamic systems through state identification, regime characterization, and transition analysis.
-
-Although financial markets serve as the initial case study, the methodology can be extended to other domains where uncertainty, variability, and state transitions play a critical role in decision-making.
+The results indicate that market evolution, modeled through Markov transition dynamics, contains more information than static regime identification alone. This supports the use of transition-based frameworks for understanding and monitoring market behavior under uncertainty.
 
 ---
-## Conclusion
+## 12. Repository structure
+market_regime_project/
 
-The results suggest that financial markets cannot be fully described by static market states alone.
+├── config/
+├── data/
+├── pipelines/
+├── src/
+│   ├── clustering/
+│   ├── features/
+│   ├── markov/
+│   ├── targets/
+│   └── visualization/
+├── results/
+└── README.md
 
-While clustering provides a useful representation of market structure, the most informative signals emerge from the transitions between regimes. Modeling these dynamics through Markov chains reveals persistence patterns, dominant transition pathways, and transition-specific behaviors that are not visible at the cluster level.
+---
+## 13. Reproducibility
+The complete workflow can be reproduced by executing the pipeline scripts sequentially:
 
-These findings support the idea that regime evolution may provide a more informative framework for understanding future market behavior than regime identification alone.
+01_feature_engineering.py
+02_clustering.py
+03_cluster_analysis.py
+04_transition_matrix.py
+05_transition_statistics.py
+06_validation.py
+11_visualization.py
 
