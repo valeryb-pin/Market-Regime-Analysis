@@ -169,8 +169,6 @@ Interestingly, some transitions that exhibited weak or even negative returns dur
 
 A key observation is that transitions involving Clusters **2** and **3** repeatedly appear among the strongest performers in the out-of-sample dataset. This finding is consistent with the previous transition heatmap analysis, where these states exhibited distinctive breakout characteristics and directional behavior.
 
-Overall, the results indicate that the predictive value is not concentrated in a single cluster but rather emerges from the interaction between regimes and their transition dynamics. Consequently, the analysis supports the use of a Markov-based framework to model market evolution and motivates the next stage of the research, where transition probabilities, persistence, and order flow characteristics will be combined to better understand the mechanisms driving future market movements.
-
 ![transition_validation_oos.png](results/transition_validation_oos.png)
 ### Research implications
 The findings suggest that market behavior is better explained by regime evolution than by static regime identification alone.
