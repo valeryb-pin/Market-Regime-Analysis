@@ -76,7 +76,8 @@ These findings indicate that market dynamics may be organized into observable st
 
 The identification of such regimes provides a structured framework for studying market behavior and evaluating how uncertainty evolves through time.
 
- "/content/drive/MyDrive/market_regime_project/results/figures/4H_regime_profiles.png"
+![cluster_target_profiles](results/cluster_target_profiles.png)
+
 ### Cluster Characterization
 
 Once the regimes were identified, each cluster was analyzed using its average feature profile. The results showed that every regime exhibits a unique behavioral signature, characterized by different levels of efficiency, persistence, volatility, compression, market activity, and order-flow imbalance.
