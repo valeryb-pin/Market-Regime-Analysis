@@ -145,7 +145,7 @@ A key observation is that transitions involving Clusters **2** and **3** repeate
 
 Overall, the results indicate that the predictive value is not concentrated in a single cluster but rather emerges from the interaction between regimes and their transition dynamics. Consequently, the analysis supports the use of a Markov-based framework to model market evolution and motivates the next stage of the research, where transition probabilities, persistence, and order flow characteristics will be combined to better understand the mechanisms driving future market movements.
 
-![transition_validation_oos.png](results/transition_validation_oos.png.png)
+![transition_validation_oos.png](results/transition_validation_oos.png)
 ### Research implications
 The findings suggest that market behavior is better explained by regime evolution than by static regime identification alone.
 
