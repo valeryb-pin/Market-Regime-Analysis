@@ -1,3 +1,4 @@
+Market Regime Dynamics: Clustering and Markov Transition Analysis
 ## 1. Overview
 
 Financial markets are often described as chaotic and unpredictable systems. However, recurring market structures may emerge when behavior is analyzed through data.
