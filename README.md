@@ -124,51 +124,98 @@ These findings suggest that the primary value of clustering may not lie in predi
 
 "/content/drive/MyDrive/market_regime_project/results/figures/4H/regime_stability.png"
 ---
+### Regime Transition Analysis
+
+After identifying the market regimes through clustering, the next step was to study how the market moves from one regime to another over time.
+
+Rather than treating clusters as isolated states, a Markov framework was used to model the transition dynamics between regimes. This allows us to estimate the probability of remaining in a given state, the expected duration of each regime, and the most likely paths followed by the market.
+
+The network representation below summarizes the most relevant regime transitions for the 4H timeframe.
+
+Interpretation of the Network
+Node size represents the expected duration of a regime.
+Node color represents transition entropy, where greener nodes indicate more predictable behavior and redder nodes indicate greater uncertainty.
+Edge thickness represents the probability of transitioning from one regime to another.
+
+The results reveal that Cluster 3 is the most stable regime, exhibiting the longest expected duration and the lowest entropy. This suggests that once the market enters this state, its future behavior becomes more predictable compared to the other regimes.
+
+Cluster 0 appears as a central transition hub, receiving the majority of transitions originating from other regimes. Both Cluster 1 and Cluster 2 exhibit strong tendencies to transition toward Cluster 0, indicating that this state may represent a common intermediate market condition.
+
+The strongest transition pathways observed are:
+
+Cluster 1 → Cluster 0
+Cluster 2 → Cluster 0
+Cluster 3 → Cluster 0
+
+These transitions form the dominant regime flow observed throughout the sample.
+/content/drive/MyDrive/market_regime_project/results/figures/4H/transition_network.png"
+---
+##### Transition-Based Target Analysis
+
+After evaluating the target behavior within each cluster, it was observed that future returns alone did not provide a strong separation between market regimes. While some differences existed, the clustering process was not able to identify regimes with consistently distinct return profiles.
+
+To further investigate the information contained in the market states, the analysis was extended from individual clusters to regime transitions. Using the Markov framework, each observation was classified according to the transition between consecutive states (e.g., 0→3, 1→0, 2→3).
+
+The resulting heatmap summarizes the average target behavior associated with each transition. Three target variables were analyzed:
+
+* **Future Return:** average forward return after the transition.
+* **Breakout Up:** probability of an upward breakout.
+* **Breakout Down:** probability of a downward breakout.
+
+### Key Findings
+
+The analysis reveals that the transition itself contains more information than the isolated cluster.
+
+The strongest positive future returns are concentrated in transitions such as:
+
+* **0→3**
+* **1→0**
+* **0→2**
+* **3→2**
+
+These transitions also exhibit relatively high probabilities of upward breakouts, suggesting that changes in market state may contain predictive information regarding future directional movement.
+
+Conversely, transitions such as:
+
+* **1→3**
+* **2→3**
+* **3→1**
+* **3→3**
+
+show negative average future returns and significantly higher probabilities of downward breakouts. In particular, transitions ending in or remaining within Cluster 3 appear associated with increased downside risk.
+
+### Interpretation
+
+These results suggest that market structure is not fully captured by static regime identification. Instead, the evolution of the market from one regime to another provides additional information regarding future behavior.
+
+This finding motivates the use of Markov transition dynamics as a complementary layer to clustering. Rather than asking:
+
+> Which cluster produces the highest return?
+
+the more relevant question becomes:
+
+> What is the probability of moving to the next regime, and how does that transition affect future market behavior?
+
+The transition framework therefore becomes the foundation for the next stage of the research, where order flow and market microstructure variables will be analyzed conditional on specific regime transitions in order to better understand the mechanisms driving directional market movements.
+/content/drive/MyDrive/market_regime_project/results/figures/4H/transition_target_heatmap.png"
+---
 ## Key Findings
 
-The analysis revealed that market behavior does not appear to be entirely random.
+## Validation vs Out-of-Sample Transition Analysis
 
-Although price movements exhibit significant short-term variability and heteroscedasticity, more stable structures emerge when observations are analyzed across specific time horizons.
+To evaluate the robustness of the transition-based framework, the average future returns associated with the most relevant regime transitions were compared between the validation and out-of-sample datasets.
 
-This suggests that market activity may be organized into recurring behavioral states rather than representing a purely random process.
+The results show that several transitions maintain positive returns across both samples, suggesting that part of the information extracted from the regime transition process generalizes beyond the calibration period.
 
----
+Among the strongest transitions, **3→2** stands out as the most consistent pattern, exhibiting the highest average future return in both validation and out-of-sample data. Similarly, transitions **3→0**, **1→1**, and **0→1** maintain positive returns across both datasets, indicating a degree of stability in their directional behavior.
 
-## Key Finding #2: The 4-Hour Timeframe Showed Greater Reproducibility
+Interestingly, some transitions that exhibited weak or even negative returns during validation, such as **2→3** and **2→2**, showed substantially improved performance out-of-sample. This suggests that the predictive information contained within regime evolution may vary across market environments and reinforces the importance of evaluating transition dynamics under different market conditions.
 
-Several timeframes were evaluated during the clustering process.
+A key observation is that transitions involving Clusters **2** and **3** repeatedly appear among the strongest performers in the out-of-sample dataset. This finding is consistent with the previous transition heatmap analysis, where these states exhibited distinctive breakout characteristics and directional behavior.
 
-Among them, the 4-hour timeframe demonstrated stronger regime separation and improved reproducibility, making it the most suitable environment for studying market state dynamics within this framework.
+Overall, the results indicate that the predictive value is not concentrated in a single cluster but rather emerges from the interaction between regimes and their transition dynamics. Consequently, the analysis supports the use of a Markov-based framework to model market evolution and motivates the next stage of the research, where transition probabilities, persistence, and order flow characteristics will be combined to better understand the mechanisms driving future market movements.
 
----
-
-## Key Finding #3: Transitions Were More Informative Than Clusters Alone
-
-One of the most important discoveries of the project was that identifying regimes was only the first step.
-
-While clustering successfully segmented market behavior into distinct states, the greatest analytical value emerged from studying how the market moved between those states.
-
-Rather than focusing exclusively on identifying the "best" regime, the analysis shifted toward understanding:
-
-- Regime persistence
-- State durability
-- Transition probabilities
-- Behavioral evolution through time
-
-This perspective transformed the problem from a static classification exercise into the analysis of a dynamic system.
-
----
-
-## Validation Approach
-
-To evaluate robustness and reduce information leakage, the framework incorporates:
-
-- Temporal validation procedures
-- Out-of-Sample (OOS) testing
-- Reproducibility assessments across unseen observations
-
-These validation steps provide evidence that the identified regimes are not merely artifacts of the training sample and can be observed consistently across different periods.
-
+/content/drive/MyDrive/market_regime_project/results/figures/4H/transition_validation_oos.png"
 ---
 
 ## Future Work
