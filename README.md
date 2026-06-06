@@ -68,7 +68,7 @@ This project contributes by:
 
 ---
 ## Results
-### Regime Identification: One of the central questions of this project was whether financial markets behave as completely random systems or whether recurring structures can be identified through data.
+### Regime Identification: 
 
 The results suggest that market behavior is not entirely random. Distinct regimes emerged consistently across the analysis, exhibiting different characteristics in terms of efficiency, volatility, persistence, compression, and market activity.
 
@@ -77,13 +77,12 @@ These findings indicate that market dynamics may be organized into observable st
 The identification of such regimes provides a structured framework for studying market behavior and evaluating how uncertainty evolves through time.
 
  "/content/drive/MyDrive/market_regime_project/results/figures/4H_regime_profiles.png"
-### Cluster Characterization: While the clustering process successfully identified distinct market states, understanding what differentiates those states is essential for interpretation.
+### Cluster Characterization
 
 Once the regimes were identified, each cluster was analyzed using its average feature profile. The results showed that every regime exhibits a unique behavioral signature, characterized by different levels of efficiency, persistence, volatility, compression, market activity, and order-flow imbalance.
 
 This step transforms clustering from a purely statistical exercise into an interpretable framework for describing market conditions.
 "/content/drive/MyDrive/market_regime_project/results/figures/4H_regime_bars.png"
-
 ### Target Differentiation Across Regimes
 
 To determine whether the identified regimes contain predictive information, several forward-looking targets were evaluated:
