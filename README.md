@@ -75,19 +75,39 @@ The clustering analysis revealed the existence of distinct market regimes charac
 
 Rather than behaving as a purely random process, market activity appears to alternate between observable states with identifiable structural properties. These states provide a framework for describing how market conditions evolve through time and how future behavior may depend on the current regime.
 
-The resulting regimes form the foundation for subsequent analyses, including target evaluation, transition dynamics, and Markov-chain modeling.
+To interpret the identified regimes, the average feature profile of each cluster was analyzed using normalized feature values. The results indicate that each regime exhibits a distinct behavioral signature.
 
-![regimen_profile](results/regimen_profile.png)
+Cluster 0 — Active but Low-Efficiency Regime
+Moderate order-flow imbalance.
+Lowest efficiency and persistence levels.
+Highest volume-to-range ratio.
+Low volatility and compression.
 
-### Cluster Characterization
+This regime appears to represent highly active market conditions where trading participation is elevated, but directional structure remains weak.
 
-Once the regimes were identified, each cluster was analyzed using its average feature profile. The results showed that every regime exhibits a unique behavioral signature, characterized by different levels of efficiency, persistence, volatility, compression, market activity, and order-flow imbalance.
+Cluster 1 — Efficient and Persistent Regime
+High efficiency ratio.
+High persistence.
+Low volatility.
+Low compression and liquidity stress.
 
-This step transforms clustering from a purely statistical exercise into an interpretable framework for describing market conditions.
+This regime reflects relatively stable and directional market behavior, where price movements exhibit greater continuity.
 
-For example:
-Cluster 2 exhibits the highest levels of efficiency and persistence, suggesting a more structured and stable market environment.
-Cluster 3 is characterized by elevated compression and volatility, indicating a potentially transitional market state where accumulated pressure may lead to significant changes in market behavior.
+Cluster 2 — Strong Trend Regime
+Highest efficiency ratio.
+Highest persistence.
+Strong order-flow imbalance.
+Low volatility and compression.
+
+This regime represents the most structured market state observed in the analysis, suggesting sustained directional behavior and trend continuation.
+
+Cluster 3 — Compression and Volatility Regime
+Highest volatility.
+Highest compression.
+Elevated liquidity stress (Amihud).
+Lower persistence.
+
+This regime appears to capture transitional market conditions characterized by uncertainty, volatility expansion, and increased potential for structural change.
 
 ![regimen_future_comparison](results/regimen_future_comparison.png)
 ### Target Differentiation Across Regimes
