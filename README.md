@@ -71,11 +71,11 @@ This project contributes by:
 ## 7. Results
 ### Regime Identification: 
 
-The results suggest that market behavior is not entirely random. Distinct regimes emerged consistently across the analysis, exhibiting different characteristics in terms of efficiency, volatility, persistence, compression, and market activity.
+The clustering analysis revealed the existence of distinct market regimes characterized by different combinations of liquidity, efficiency, persistence, volatility, and order-flow dynamics.
 
-These findings indicate that market dynamics may be organized into observable states rather than representing a purely chaotic process.
+Rather than behaving as a purely random process, market activity appears to alternate between observable states with identifiable structural properties. These states provide a framework for describing how market conditions evolve through time and how future behavior may depend on the current regime.
 
-The identification of such regimes provides a structured framework for studying market behavior and evaluating how uncertainty evolves through time.
+The resulting regimes form the foundation for subsequent analyses, including target evaluation, transition dynamics, and Markov-chain modeling.
 
 ![regimen_profile](results/regimen_profile.png)
 
