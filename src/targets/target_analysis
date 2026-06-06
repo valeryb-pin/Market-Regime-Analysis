@@ -1,0 +1,26 @@
+import pandas as pd
+
+
+def analyze_clusters(
+        df,
+        cluster_col="cluster"
+):
+
+    summary = (
+
+        df
+        .groupby(cluster_col)
+
+        .agg({
+
+            "future_return": "mean",
+
+            "breakout_up": "mean",
+
+            "breakout_down": "mean"
+
+        })
+
+    )
+
+    return summary
