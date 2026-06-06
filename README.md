@@ -240,3 +240,11 @@ The complete workflow can be reproduced by executing the pipeline scripts sequen
 06_validation.py
 11_visualization.py
 
+## Author
+
+Valery Pinto.
+
+Chemical Engineer with experience in the pharmaceutical industry, currently focused on Data Science, Quantitative Finance, and Educational Analytics.
+
+GitHub: @valeryb-pin
+LinkedIn: www.linkedin.com/in/valerypinto
