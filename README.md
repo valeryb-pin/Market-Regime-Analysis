@@ -76,14 +76,14 @@ These findings indicate that market dynamics may be organized into observable st
 
 The identification of such regimes provides a structured framework for studying market behavior and evaluating how uncertainty evolves through time.
 
-![cluster_target_profiles](results/cluster_target_profiles.png)
+![regimen_profile](results/regimen_profile.png)
 
 ### Cluster Characterization
 
 Once the regimes were identified, each cluster was analyzed using its average feature profile. The results showed that every regime exhibits a unique behavioral signature, characterized by different levels of efficiency, persistence, volatility, compression, market activity, and order-flow imbalance.
 
 This step transforms clustering from a purely statistical exercise into an interpretable framework for describing market conditions.
-"/content/drive/MyDrive/market_regime_project/results/figures/4H_regime_bars.png"
+![regimen_bars](results/regimen_bars.png)
 ### Target Differentiation Across Regimes
 
 To determine whether the identified regimes contain predictive information, several forward-looking targets were evaluated:
@@ -95,7 +95,7 @@ To determine whether the identified regimes contain predictive information, seve
 
 Future return was considered the primary target; however, the results showed limited differentiation across clusters. In contrast, breakout-related targets displayed clearer differences, suggesting that the clustering process captures variations in directional pressure and market structure rather than direct return predictability.
 
-/content/drive/MyDrive/market_regime_project/results/figures/4H/cluster_target_profiles.png"
+![cluster_target_profiles](results/cluster_target_profiles.png)
 ### Regimen stability 
 Since future returns alone did not strongly distinguish the regimes, the analysis shifted toward studying their temporal behavior.
 
@@ -103,7 +103,7 @@ For each regime, persistence, expected duration, and transition entropy were est
 
 This finding suggests that the value of clustering lies not only in identifying market states but also in understanding how long those states tend to persist.
 
-"/content/drive/MyDrive/market_regime_project/results/figures/4H/regime_stability.png"
+![regime_stability](results/regime_stability.png)
 
 ### Markov Transition Modeling
 
@@ -117,7 +117,7 @@ Transition probabilities
 Transition uncertainty (entropy)
 
 The analysis revealed dominant transition pathways and identified stable regimes that act as recurring states within the market structure.
-/content/drive/MyDrive/market_regime_project/results/figures/4H/transition_network.png"
+![transition_network](results/transition_network.png)
 
 ### Transition-Based Target Analysis
 
@@ -130,7 +130,7 @@ The resulting heatmap summarizes the average target behavior associated with eac
 * **Future Return:** average forward return after the transition.
 * **Breakout Up:** probability of an upward breakout.
 * **Breakout Down:** probability of a downward breakout.
-/content/drive/MyDrive/market_regime_project/results/figures/4H/transition_target_heatmap.png"
+![transition_target_heatmap](results/transition_target_heatmap.png)
 
 ### Validation vs Out-of-Sample Transition Analysis
 To evaluate the robustness of the transition-based framework, the average future returns associated with the most relevant regime transitions were compared between the validation and out-of-sample datasets.
@@ -145,7 +145,7 @@ A key observation is that transitions involving Clusters **2** and **3** repeate
 
 Overall, the results indicate that the predictive value is not concentrated in a single cluster but rather emerges from the interaction between regimes and their transition dynamics. Consequently, the analysis supports the use of a Markov-based framework to model market evolution and motivates the next stage of the research, where transition probabilities, persistence, and order flow characteristics will be combined to better understand the mechanisms driving future market movements.
 
-/content/drive/MyDrive/market_regime_project/results/figures/4H/transition_validation_oos.png"
+![transition_validation_oos.png](results/transition_validation_oos.png.png)
 ### Research implications
 The findings suggest that market behavior is better explained by regime evolution than by static regime identification alone.
 
