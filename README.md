@@ -84,6 +84,10 @@ The identification of such regimes provides a structured framework for studying 
 Once the regimes were identified, each cluster was analyzed using its average feature profile. The results showed that every regime exhibits a unique behavioral signature, characterized by different levels of efficiency, persistence, volatility, compression, market activity, and order-flow imbalance.
 
 This step transforms clustering from a purely statistical exercise into an interpretable framework for describing market conditions.
+For example:
+Cluster 2 exhibits the highest levels of efficiency and persistence, suggesting a more structured and stable market environment.
+Cluster 3 is characterized by elevated compression and volatility, indicating a potentially transitional market state where accumulated pressure may lead to significant changes in market behavior.
+
 ![regimen_future_comparison](results/regimen_future_comparison.png)
 ### Target Differentiation Across Regimes
 
