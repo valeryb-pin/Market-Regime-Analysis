@@ -244,7 +244,8 @@ The complete workflow can be reproduced by executing the pipeline scripts sequen
 
 Valery Pinto.
 
-Chemical Engineer with experience in the pharmaceutical industry, currently focused on Data Science, Quantitative Finance, and Educational Analytics.
+Chemical Engineer with experience in the pharmaceutical industry, currently focused on Data Science, Quantitative Finance
 
-GitHub: @valeryb-pin
-LinkedIn: www.linkedin.com/in/valerypinto
+GitHub: [@valeryb-pin]
+
+LinkedIn: [www.linkedin.com/in/valerypinto]
