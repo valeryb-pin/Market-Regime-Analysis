@@ -117,7 +117,6 @@ To determine whether the identified regimes contain predictive information, seve
 - Future Return
 - Breakout Up
 - Breakout Down
-- Sharpe-like Ratio
 
 Future return was considered the primary target; however, the results showed limited differentiation across clusters. In contrast, breakout-related targets displayed clearer differences, suggesting that the clustering process captures variations in directional pressure and market structure rather than direct return predictability.
 ![regimen_future_comparison](results/market.png)
