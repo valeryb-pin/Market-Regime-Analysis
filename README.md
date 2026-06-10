@@ -135,10 +135,10 @@ A Markov framework was then used to model regime evolution through time.
 
 Transition matrices were estimated to quantify:
 
-Regime persistence
-Expected duration
-Transition probabilities
-Transition uncertainty (entropy)
+- Regime persistence
+- Expected duration
+- Transition probabilities
+- Transition uncertainty (entropy)
 
 The analysis revealed dominant transition pathways and identified stable regimes that act as recurring states within the market structure.
 ![transition_network](results/transition_network.png)
