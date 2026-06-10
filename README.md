@@ -109,7 +109,7 @@ Lower persistence.
 
 This regime appears to capture transitional market conditions characterized by uncertainty, volatility expansion, and increased potential for structural change.
 
-![regimen_future_comparison](results/market.png)
+![cluster_target_profiles](results/regimen_future_comparison.png)
 ### Target Differentiation Across Regimes
 
 To determine whether the identified regimes contain predictive information, several forward-looking targets were evaluated:
@@ -120,8 +120,7 @@ To determine whether the identified regimes contain predictive information, seve
 - Sharpe-like Ratio
 
 Future return was considered the primary target; however, the results showed limited differentiation across clusters. In contrast, breakout-related targets displayed clearer differences, suggesting that the clustering process captures variations in directional pressure and market structure rather than direct return predictability.
-
-![cluster_target_profiles](results/cluster_target_profiles.png)
+![regimen_future_comparison](results/market.png)
 ### Regimen stability 
 Since future returns alone did not strongly distinguish the regimes, the analysis shifted toward studying their temporal behavior.
 
