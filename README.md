@@ -109,7 +109,7 @@ Lower persistence.
 
 This regime appears to capture transitional market conditions characterized by uncertainty, volatility expansion, and increased potential for structural change.
 
-![regimen_future_comparison](results/regimen_future_comparison.png)
+![regimen_future_comparison](results/market.png)
 ### Target Differentiation Across Regimes
 
 To determine whether the identified regimes contain predictive information, several forward-looking targets were evaluated:
